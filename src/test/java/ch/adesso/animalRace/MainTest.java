@@ -1,21 +1,21 @@
 package ch.adesso.animalRace;
 
-import static org.junit.Assert.*;
-
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.StringTokenizer;
 
-import org.junit.*;
-
 import ch.adesso.animalRace.animal.AnimalType;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
 
 	private OutputStream outputStream;
 
-	@Before
+	@BeforeEach
 	public void setup() {
 		outputStream = new ByteArrayOutputStream();
 		PrintStream printStream = new PrintStream(outputStream);
